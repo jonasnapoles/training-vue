@@ -18,8 +18,13 @@ const routes = [
     path: '/services',
     name: 'services',
     component: () => import(/* webpackChunkName: "services" */ '../views/Services.vue')
-  }
-
+  },
+  //dynamic route 
+  {
+    path: '/photos/:id',
+    name: 'photos',
+    component: () => import(/* webpackChunkName: "photos" */ '../views/Photos.vue')
+  },
 ]
 
 const router = createRouter({
